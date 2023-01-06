@@ -97,4 +97,4 @@ def get_channel_video_info_csv(channelId):
                     
     # merge the vid_deets and vid_df together and export the CSV                    
     vid_df = vid_df.merge(vid_deets, on='Video ID')
-    vid_df.to_csv(re.sub(r"^\s+", "", vid_df['Channel Title'][0]) + "_VideInfo.csv", index=False)
+    vid_df.to_csv(re.sub(r"^\s+", "", vid_df['Channel Title'][0]) + "_VidInfo.csv", index=False)

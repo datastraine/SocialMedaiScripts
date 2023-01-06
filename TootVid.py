@@ -16,7 +16,7 @@ location = os.path.join(home, 'Documents/Scripts') # <-- replace with what ever 
 m = Mastodon(access_token=Masto, api_base_url="https://federated.press/") # <-- replace with your mastodon instance url
 
 # assign path obj to the direct path of the channel's info CSV
-path = location + "VideInfo.csv" # <-- your video info URL
+path = location + "VidInfo.csv" # <-- your video info URL
 
 # assign a date to a rerunyt obj. This is used to determine if we need to pull the channel info again. I have it set to get the file every 3 days
 rerunyt = datetime.fromtimestamp(os.path.getmtime(path)) + timedelta(days=3)
