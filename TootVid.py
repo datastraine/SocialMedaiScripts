@@ -93,7 +93,7 @@ m.toot(f"{list(df[df['Video ID']==post]['Description'])[0]} {'https://www.youtub
 print("Toot complete!")
 
 # create a rerundontpost obj to store the date we want to delete the dontpost file to start over. I have it set to 14 days
-rerundontpost = datetime.fromtimestamp(os.path.getmtime(f"{location}\dontpost.txt")) + timedelta(days=14)
+rerundontpost = datetime.fromtimestamp(os.path.getctime(f"{location}\dontpost.txt")) + timedelta(days=14)
 
 # use an if else statement to check to see if dontpost video is old enough to replace 
 if rerundontpost < datetime.today():
